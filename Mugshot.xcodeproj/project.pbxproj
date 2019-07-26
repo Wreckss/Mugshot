@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1C67C71D22EB330300EAB456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C67C71C22EB330300EAB456 /* AppDelegate.swift */; };
-		1C67C71F22EB330300EAB456 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C67C71E22EB330300EAB456 /* art.scnassets */; };
 		1C67C72122EB330300EAB456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C67C72022EB330300EAB456 /* ViewController.swift */; };
 		1C67C72422EB330300EAB456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C67C72222EB330300EAB456 /* Main.storyboard */; };
 		1C67C72622EB330400EAB456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C67C72522EB330400EAB456 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		1C67C71922EB330300EAB456 /* Mugshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mugshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C67C71C22EB330300EAB456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C67C71E22EB330300EAB456 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		1C67C72022EB330300EAB456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C67C72322EB330300EAB456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C67C72522EB330400EAB456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				1C67C71C22EB330300EAB456 /* AppDelegate.swift */,
-				1C67C71E22EB330300EAB456 /* art.scnassets */,
 				1C67C72022EB330300EAB456 /* ViewController.swift */,
 				1C67C72222EB330300EAB456 /* Main.storyboard */,
 				1C67C72522EB330400EAB456 /* Assets.xcassets */,
@@ -125,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C67C71F22EB330300EAB456 /* art.scnassets in Resources */,
 				1C67C72922EB330400EAB456 /* LaunchScreen.storyboard in Resources */,
 				1C67C72622EB330400EAB456 /* Assets.xcassets in Resources */,
 				1C67C72422EB330300EAB456 /* Main.storyboard in Resources */,
@@ -287,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BXDKT84HC;
 				INFOPLIST_FILE = Mugshot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BXDKT84HC;
 				INFOPLIST_FILE = Mugshot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
