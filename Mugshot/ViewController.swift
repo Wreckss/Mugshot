@@ -72,7 +72,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         planeNode.addChildNode(titleNode)
         
         
-        let bioNode = textNode(scientist.bio, font: UIFont.systemFontSize(ofSize: 4) , maxWidth: 100)
+        let bioNode = textNode(scientist.bio, font: UIFont.systemFont(ofSize: 4) , maxWidth: 100)
         bioNode.pivotOnTopLeft()
         
         return node
