@@ -71,7 +71,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         planeNode.addChildNode(titleNode)
         
-        
         let bioNode = textNode(scientist.bio, font: UIFont.systemFont(ofSize: 4) , maxWidth: 100)
         bioNode.pivotOnTopLeft()
         
@@ -79,7 +78,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         bioNode.position.y = titleNode.position.y - titleNode.height - spacing
         planeNode.addChildNode(bioNode)
         
+        let flag = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.width / 8 * 5)
+        flag.firstMaterial?.diffuse.contents = UIImage(named: scientist.country)
         
+        let flagNode = SCNNode(geometry: flag)
+        flagNode.pivotOnTopCenter()
+        
+        flagNode.position.y -= Float(plane.height / 2) + spacing
+        planeNode.addChildNode(flagNode)
         
         return node
     }
