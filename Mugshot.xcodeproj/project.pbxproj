@@ -12,6 +12,7 @@
 		1C67C72422EB330300EAB456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C67C72222EB330300EAB456 /* Main.storyboard */; };
 		1C67C72622EB330400EAB456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C67C72522EB330400EAB456 /* Assets.xcassets */; };
 		1C67C72922EB330400EAB456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C67C72722EB330400EAB456 /* LaunchScreen.storyboard */; };
+		1C7C1EAA22EB7F73004DB13C /* Scientist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C1EA922EB7F73004DB13C /* Scientist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1C67C72522EB330400EAB456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C67C72822EB330400EAB456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C67C72A22EB330400EAB456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C7C1EA922EB7F73004DB13C /* Scientist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scientist.swift; path = ../../../../../System/Volumes/Data/Users/taco/XcodeProjects/Mugshot/Mugshot/Scientist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				1C67C71C22EB330300EAB456 /* AppDelegate.swift */,
 				1C67C72022EB330300EAB456 /* ViewController.swift */,
+				1C7C1EA922EB7F73004DB13C /* Scientist.swift */,
 				1C67C72222EB330300EAB456 /* Main.storyboard */,
 				1C67C72522EB330400EAB456 /* Assets.xcassets */,
 				1C67C72722EB330400EAB456 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C67C72122EB330300EAB456 /* ViewController.swift in Sources */,
+				1C7C1EAA22EB7F73004DB13C /* Scientist.swift in Sources */,
 				1C67C71D22EB330300EAB456 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
