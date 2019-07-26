@@ -47,13 +47,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
+    //nodeFor method
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
         guard let name = imageAnchor.referenceImage.name else { return nil }
         guard let scientist = scientists[name] else { return nil }
         
         let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
-        plane.firstMaterial?.diffuse.contents = UIColor.blue
+        plane.firstMaterial?.diffuse.contents = UIColor.clear
         
         let planeNode = SCNNode(geometry: plane)
         planeNode.eulerAngles.x = -.pi / 2
@@ -61,8 +62,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
         node.addChildNode(planeNode)
         
-        let spacing: Float = 0.005
+        let spacing: Float = 0.005      //used to keep spacing between items
         
+        let titleNode = textNode(scientist.name, font: UIFont.boldSystemFont(ofSize: 10))
+        titleNode.pivotOnTopLeft()
+        titleNode.position.x += Float(plane.width / 2) + spacing
+        titleNode.position.y += Float(plane.height / 2)
+        
+        planeNode.addChildNode(titleNode)
+        
+        
+        let bioNode = textNode(scientist.bio, font: UIFont.systemFontSize(ofSize: 4) , maxWidth: 100)
+        bioNode.pivotOnTopLeft()
         
         return node
     }
@@ -92,6 +103,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         text.font = font
         
         if let maxWidth = maxWidth {
+            //this line makes the text smaller
             text.containerFrame = CGRect(origin: .zero, size: CGSize(width: maxWidth, height: 500))
             text.isWrapped = true
         }
