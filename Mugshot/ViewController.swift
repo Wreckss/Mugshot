@@ -4,7 +4,7 @@
 //
 //  Created by taco on 7/26/19.
 //  Copyright © 2019 tacoTruck. All rights reserved.
-//
+// https://www.youtube.com/watch?v=XqRVfB521Fo
 
 import UIKit
 import SceneKit
@@ -74,6 +74,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let bioNode = textNode(scientist.bio, font: UIFont.systemFont(ofSize: 4) , maxWidth: 100)
         bioNode.pivotOnTopLeft()
+        
+        bioNode.position.x += Float(plane.width / 2) + spacing
+        bioNode.position.y = titleNode.position.y - titleNode.height - spacing
+        planeNode.addChildNode(bioNode)
+        
+        
         
         return node
     }
