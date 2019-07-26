@@ -47,6 +47,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
+        guard let name = imageAnchor.referenceImage.name else { return nil }
+        guard let scientist = scientists[name] else { return nil }
+        
+        let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
+        plane.firstMaterial?.diffuse.contents = UIColor.blue
+        
+        let planeNode = SCNNode(geometry: plane)
+        planeNode.eulerAngles.x = -.pi / 2
+        
+        let node = SCNNode()
+        node.addChildNode(planeNode)
+        
+        let spacing: Float = 0.005
+        
+        
+        return node
+    }
+    
     func loadData() {
         guard let url = Bundle.main.url(forResource: "scientists", withExtension: "json") else {
             fatalError("Unable to find JSON in bundle")
